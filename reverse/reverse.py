@@ -65,7 +65,8 @@ class LinkedList:
 
 
 """
-prev = null  (is this necessary or do we just add a previous attribute to the ListNode class)
+PLAN: 
+prev = null  
 
 while curr is not None
 next = curr.next
