@@ -1,5 +1,5 @@
 import time
-from binary_search_tree import BinarySearchTree as bst
+from binary_search_tree import BinarySearchTree
 
 
 
@@ -17,6 +17,7 @@ duplicates = []
 
 """
 # Orginal Solution
+# run time: 17.0546 seconds
 for name_1 in names_1:
     for name_2 in names_2:
         if name_1 == name_2:
@@ -25,8 +26,11 @@ for name_1 in names_1:
 
 """
 My Solution
-Time Complexity: 
+run time: 0.3694 seconds
+Time Complexity: O(n)
 """
+# Create the Binary Search Tree first
+bst = BinarySearchTree(names_1[0])
 # Loop through first set of names 
 for name in names_1:
     # add it to the binary search tree
@@ -54,7 +58,7 @@ print (f"runtime: {end_time - start_time} seconds")
 # structures?
 
 """
-The runtime for this solution before optimization is O(n^2)
+The time complexity for this solution before optimization is O(n^2)
 where n is the number of names in name_1.  
 
 We need to make the run time O(n log n), O(n), or O(log n)
