@@ -44,4 +44,33 @@ class LinkedList:
 
   def reverse_list(self):
     # TO BE COMPLETED
-    pass
+    # Create a previous variable and set it equal to None
+    prev = None
+    # Create a current pointer and set it equal to the head
+    curr_node = self.head
+    # Traverse through the list while curr is not equal to None
+    while curr_node is not None:
+      # create a temp variable to store what next is currently
+      next_node = curr_node.get_next()
+      # set what next points to in the current node to previous (this switches the pointer)
+      # on the first node prev is None
+      curr_node.set_next(prev)
+      # update prev to now be what's stored in curr
+      # on the first node curr is the Head
+      prev = curr_node
+      # set the head to the current node
+      self.head = curr_node
+      #update curr to what used to be the next node
+      curr_node = next_node
+
+
+"""
+PLAN: 
+prev = null  
+
+while curr is not None
+next = curr.next
+curr.next = prev
+prev = curr
+curr = next
+"""
